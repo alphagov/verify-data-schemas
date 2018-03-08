@@ -1,0 +1,110 @@
+{
+  "title": "Performance Report Schema",
+  "type": "object",
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "valid_from": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "audience": {
+      "type": "string"
+    },
+    "frequency": {
+      "type": "string"
+    },
+    "owner": {
+      "type": "string"
+    },
+    "meta": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "from",
+          "to",
+          "producer"
+        ]
+      }
+    },
+    "fields": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "optional": {
+            "type": "boolean"
+          },
+          "description": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "string",
+              "number",
+              "boolean"
+            ]
+          },
+          "calculated": {
+            "type": "boolean"
+          },
+          "provenance": {
+            "type": "string"
+          },
+          "how": {
+            "type": "object",
+            "oneOf": [
+              {
+                "properties": {
+                  "path": {
+                    "type": "string"
+                  }
+                }
+              },
+              {
+                "properties": {
+                  "url": {
+                    "type": "string"
+                  }
+                }
+              },
+              {
+                "properties": {
+                  "api_call": {
+                    "type": "string"
+                  }
+                }
+              },
+              {
+                "properties": {
+                  "none": {
+                    "type": "boolean"
+                  }
+                }
+              }
+            ]
+          },
+          "derived_from": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
