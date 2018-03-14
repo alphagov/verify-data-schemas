@@ -1,0 +1,21 @@
+title: IDP MVP Report
+version: 0.0.1
+valid_from: 01 March 2018
+description: An MVP report for IDPs
+audience: IDP
+frequency: weekly
+owner: John Doe <john.doe@acme.org>
+meta:
+  - from
+  - to
+  - producer
+fields:
+  - label: date
+    name: Date
+    optional: False
+    description: The week interval
+    type: string
+  - label: signins
+    name: Sign Ins
+    optional: False
+    description: Number of sign ins for that IDP in that week
