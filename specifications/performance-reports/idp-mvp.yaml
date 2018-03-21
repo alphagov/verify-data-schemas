@@ -1,0 +1,53 @@
+title: IDP MVP Report
+version: 0.0.1
+valid_from: 01 March 2018
+description: An MVP report for IDPs
+audience: IDP
+frequency: weekly
+owner: Will Fox <will.fox@digital.cabinet-office.gov.uk>
+meta:
+  - from
+  - to
+  - producer
+fields:
+  - label: date
+    name: Date
+    type: string
+    optional: False
+    description: The week interval
+    provenance: N/A
+
+  - label: signups
+    name: Number of users signup
+    type: number
+    optional: False
+    description: The numbers of all users who start a signup journey
+    provenance: Piwik
+    starting_point: Select documents page
+
+  - label: picker_total
+    name: Sent from hub to all idp
+    type: number
+    optional: False
+    description: All users who have been sent to any IDP
+    glossary: All users who have been sent to any IDP. Only counted once per IDP in a session (when user has clicked through to any IDP)
+    provenance: Piwik
+    starting_point: IDP page (action on continue to the {{idp_name}} website)
+
+  - label: picker_by_idp
+    name: Sent from hub to {{idp_name}}
+    type: number
+    optional: False
+    description: All users who have been sent to your IDP
+    glossary: All users who have been sent to your IDP. Only counted once per IDP in a session (when user has clicked through to your IDP)
+    provenance: Piwik
+    starting_point: IDP page (action on continue to the {{idp_name}} website)
+
+  - label: signins
+    name: Number of users signin
+    type: number
+    optional: False
+    description: The numbers of all users who start a signin journey (or attempt to reuse an existing Verify account)
+    provenance: Piwik
+    starting_point: Signin with a certified company
+

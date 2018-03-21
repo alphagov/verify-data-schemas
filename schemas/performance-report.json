@@ -47,12 +47,6 @@
           "name": {
             "type": "string"
           },
-          "optional": {
-            "type": "boolean"
-          },
-          "description": {
-            "type": "string"
-          },
           "type": {
             "type": "string",
             "enum": [
@@ -60,6 +54,15 @@
               "number",
               "boolean"
             ]
+          },
+          "optional": {
+            "type": "boolean"
+          },
+          "description": {
+            "type": "string"
+          },
+          "glossary": {
+            "type": "string"
           },
           "calculated": {
             "type": "boolean"
@@ -102,9 +105,32 @@
           },
           "derived_from": {
             "type": "string"
+          },
+          "starting_point": {
+            "type": "string"
           }
-        }
+        },
+        "required": [
+          "label",
+          "name",
+          "type",
+          "optional",
+          "description",
+          "provenance"
+        ],
+        "additionalProperties": false
       }
     }
-  }
+  },
+  "required": [
+          "title",
+          "version",
+          "valid_from",
+          "description",
+          "audience",
+          "frequency",
+          "owner",
+          "fields"
+        ],
+  "additionalProperties": false
 }
