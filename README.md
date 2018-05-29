@@ -11,7 +11,8 @@ You can view YAML specifications under `specifications/`
 Specifications are not validated automatically. To validate a specification, run:
 
 ```bash
-python3 -m venv /path/to/new/virtual/environment
+python3 -m venv <path to new virtual environment>
+source <path to new virtual environment>/bin/activate
 pip3 install -r requirements.txt
 python3 scripts/validate.py specifications/performance-reports/test.yaml
 ```
