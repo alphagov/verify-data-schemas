@@ -24,7 +24,7 @@ def main():
     with open(args.schema) as sp:
         schema = json.load(sp)
     with open(args.specification) as fp:
-        spec = yaml.load(fp)
+        spec = yaml.load(fp, Loader=yaml.FullLoader)
     try:
         validate(spec, schema)
         print('{} validates against {}'.format(os.path.basename(args.specification), os.path.basename(args.schema), ))

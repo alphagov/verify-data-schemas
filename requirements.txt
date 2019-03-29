@@ -1,4 +1,4 @@
-PyYAML==3.12
-pytest==3.4.2
-jsonschema==2.6.0
-simplejson==3.13.2
+PyYAML==5.1
+pytest==3.7.4
+jsonschema==3.0.1
+simplejson==3.16.0
